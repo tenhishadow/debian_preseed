@@ -25,13 +25,9 @@ d-i netcfg/choose_interface select auto
 d-i hw-detect/firmware-lookup string never
 
 ### Mirror settings
-# Mirror protocol:
-# If you select ftp, the mirror/country string does not need to be set.
-# Default value for the mirror protocol: http.
-d-i mirror/protocol string ftp
 d-i mirror/country string manual
-d-i mirror/ftp/hostname string ftp.ch.debian.org
-d-i mirror/ftp/directory string /debian
+d-i mirror/http/hostname string ftp.ch.debian.org
+d-i mirror/http/directory string /debian
 d-i mirror/http/proxy string
 
 ### Account setup
