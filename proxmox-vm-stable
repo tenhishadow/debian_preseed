@@ -48,7 +48,7 @@ d-i passwd/root-login boolean false
 #d-i passwd/root-password-crypted password [crypt(3) hash]
 
 # To create a normal user account.
-#d-i passwd/user-fullname string Debian User
+d-i passwd/user-fullname string c156ead5-308c-4e6d-b391-01ee45344f6a
 d-i passwd/username string c156ead5-308c-4e6d-b391-01ee45344f6a
 # or encrypted using a crypt(3) hash.
 d-i passwd/user-password-crypted password $6$Ye26i8cJhcUsur1Q$IpySekaiOSgG.cJ6vOPqd46qg193cGLwo7q2w./4fdx/fzIa62ykzheSlMTPPj6ci4zP3siQ1JfgIbAG4Ee1u0
