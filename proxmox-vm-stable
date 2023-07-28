@@ -28,11 +28,30 @@ d-i hw-detect/firmware-lookup string never
 # Mirror protocol:
 # If you select ftp, the mirror/country string does not need to be set.
 # Default value for the mirror protocol: http.
-d-i mirror/protocol string http
+d-i mirror/protocol string ftp
 d-i mirror/country string manual
 d-i mirror/ftp/hostname string ftp.ch.debian.org
 d-i mirror/ftp/directory string /debian
 d-i mirror/http/proxy string
+
+### Account setup
+# Skip creation of a root account (normal user account will be able to
+# use sudo).
+d-i passwd/root-login boolean false
+# Alternatively, to skip creation of a normal user account.
+#d-i passwd/make-user boolean false
+
+# Root password, either in clear text
+#d-i passwd/root-password password r00tme
+#d-i passwd/root-password-again password r00tme
+# or encrypted using a crypt(3)  hash.
+#d-i passwd/root-password-crypted password [crypt(3) hash]
+
+# To create a normal user account.
+#d-i passwd/user-fullname string Debian User
+d-i passwd/username string c156ead5-308c-4e6d-b391-01ee45344f6a
+# or encrypted using a crypt(3) hash.
+d-i passwd/user-password-crypted password $6$Ye26i8cJhcUsur1Q$IpySekaiOSgG.cJ6vOPqd46qg193cGLwo7q2w./4fdx/fzIa62ykzheSlMTPPj6ci4zP3siQ1JfgIbAG4Ee1u0
 
 ### Clock and time zone setup
 # Controls whether or not the hardware clock is set to UTC.
