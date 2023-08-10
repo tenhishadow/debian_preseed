@@ -25,10 +25,10 @@ d-i netcfg/choose_interface select auto
 d-i hw-detect/firmware-lookup string never
 
 ### Mirror settings
-d-i mirror/country string manual
-d-i mirror/http/hostname string ftp.ch.debian.org
-d-i mirror/http/directory string /debian
-d-i mirror/http/proxy string
+# d-i mirror/country string manual
+# d-i mirror/http/hostname string ftp.ch.debian.org
+# d-i mirror/http/directory string /debian
+# d-i mirror/http/proxy string
 
 ### Account setup
 # Skip creation of a root account (normal user account will be able to
